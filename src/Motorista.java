@@ -4,6 +4,12 @@ public class Motorista{
     public String CPF;
     public String nome;
     public ArrayList<Integer> pontos = new ArrayList<Integer>();
+    public Veiculo veiculo;
+
+    public Motorista(String CPF, String Nome, Veiculo veiculo){
+        this.CPF = CPF;
+        this.Nome = Nome;
+    }
 
     public enum FormaPagamento{
         DINHEIRO,CARTAO,TODAS;
@@ -18,11 +24,11 @@ public class Motorista{
     }
 
     public Veiculo getVeiculo(){
-        return Veiculo;
+        return v;
     }
 
     public FormaPagamento[] getFormaPagamento(){
-        return FormaPagamento[];
+        return FormaPagamento;
     }
 
     public int getPontuacaoMedia(){
@@ -39,4 +45,9 @@ public class Motorista{
     public void infoPontuacao(int pontuacao){
         pontos.add(pontuacao);
     }
+
+    @Override
+	public String toString() {
+		return "Nome: " + nome + " | CPF: " + CPF + "\n";
+	}
 }

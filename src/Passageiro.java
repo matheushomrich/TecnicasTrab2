@@ -12,9 +12,9 @@ public class Passageiro{
         this.CPF = CPF;
         this.Cartao = Cartao;
         this.Nome = Nome;
-        this.pontuacaomedia = pontuacao;
+        this.pontuacaomedia = pontuacaomedia;
         forma = forma.toUpperCase();
-        if(catveiculo.equals("DINHEIRO")) {
+        if(forma.equals("DINHEIRO")) {
             this.forma = FormaPagamento.DINHEIRO;
     	}else if(forma.equals("CARTAO")) {
             this.forma = FormaPagamento.CARTAO;
@@ -44,7 +44,7 @@ public class Passageiro{
     }
 
     public void infoPontuacao(int pontuacaomedia){
-        List<> pontos = new ArrayList<>();
+        List<Integer> pontos = new ArrayList<Integer>();
         pontos.add(pontuacaomedia);
     }
 
